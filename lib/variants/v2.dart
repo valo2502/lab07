@@ -12,7 +12,6 @@ class _V2State extends State<V2> {
   double _bottomLeftRadius = 0.0;
   double _bottomRightRadius = 0.0;
 
-
   _onChangeBorderRadiusTopLeft(double value) {
     setState(() {
       _topLeftRadius = value;
@@ -37,7 +36,6 @@ class _V2State extends State<V2> {
     });
   }
 
-
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -47,13 +45,13 @@ class _V2State extends State<V2> {
           width: _size,
           height: _size,
           decoration: BoxDecoration(
-              color: Colors.blue,
-              borderRadius: BorderRadius.only(
-                  topLeft: Radius.circular(_topLeftRadius),
-                  topRight: Radius.circular(_topRightRadius),
-                  bottomLeft: Radius.circular(_bottomLeftRadius),
-                  bottomRight: Radius.circular(_bottomRightRadius)
-              )
+            color: Colors.blue,
+            borderRadius: BorderRadius.only(
+              topLeft: Radius.circular(_topLeftRadius),
+              topRight: Radius.circular(_topRightRadius),
+              bottomLeft: Radius.circular(_bottomLeftRadius),
+              bottomRight: Radius.circular(_bottomRightRadius),
+            ),
           ),
         ),
 
@@ -119,7 +117,8 @@ class _V2State extends State<V2> {
               child: Column(
                 children: [
                   Text(
-                      "Bottom Right: ${_bottomRightRadius.toStringAsFixed(2)}"),
+                    "Bottom Right: ${_bottomRightRadius.toStringAsFixed(2)}",
+                  ),
                   Slider(
                     value: _bottomRightRadius,
                     min: 0,
